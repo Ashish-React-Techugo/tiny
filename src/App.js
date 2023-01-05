@@ -17,8 +17,9 @@ function App() {
     <div className="App">
      <Editor
         apiKey=""
-        initialValue={content}
-        plugins="advlist autolink lists link image media charmap print preview anchor
+        // initialValue={content}
+        // value={content}
+        plugins="advlist autolink lists image media charmap print preview anchor
                           searchreplace visualblocks code fullscreen
                           insertdatetime media table paste code help wordcount"
         init={{
@@ -43,6 +44,7 @@ function App() {
               callback('movie.mp4', { source2: 'alt.ogg', poster: 'image.jpg' });
             }
           },
+          browser_spellcheck:true,
           file_picker_types: 'image media',
           /* and here's our custom image picker*/
           file_picker_callback: function (cb, value, meta) {
